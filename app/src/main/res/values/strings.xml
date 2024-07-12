@@ -1,0 +1,11 @@
+<resources>
+        <string name="app_name">CadastroClientes</string>
+
+        <string name="hint_name">Nome</string>
+        <string name="hint_email">Email</string>
+        <string name="hint_phone">Telefone</string>
+        <string name="button_save">Salvar</string>
+        <string name="button_view">Visualizar</string>
+        <string name="buttonLimparCampo">Limpar Campos</string>
+
+</resources>

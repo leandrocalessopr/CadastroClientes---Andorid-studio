@@ -1,0 +1,103 @@
+<!--  Estudos .
+
+      No Android, "match_parent" é uma constante usada para definir a largura ou altura de um elemento em um layout.
+      Quando você define a largura (layout_width) ou altura (layout_height) de um elemento como match_parent, está
+      dizendo ao sistema que deseja que o elemento preencha toda a dimensão disponível do seu pai (parent).
+
+      No Android, "wrap_content" é uma constante usada para definir a largura ou altura de um elemento em um layout.
+      Quando você define a largura (layout_width) ou altura (layout_height) de um elemento como wrap_content, está
+      dizendo ao sistema que deseja que o elemento se ajuste ao tamanho necessário para acomodar seu conteúdo.
+
+      LinearLayout é um dos layouts mais básicos e comuns no Android, usado para organizar os elementos da interface
+      do usuário em uma única linha, seja horizontalmente ou verticalmente. Este layout organiza seus elementos filhos
+      em uma direção, que pode ser definida usando o atributo android:orientation.
+
+      Atributos Principais do LinearLayout :
+
+        android:orientation
+        horizontal: Alinha os elementos filhos em uma única linha horizontal.
+        vertical  : Alinha os elementos filhos em uma única coluna vertical.
+        android   : layout_width e android:layout_height
+
+        Determinam a largura e a altura do LinearLayout.
+        android:layout_weight
+
+        Define a proporção de espaço que um elemento deve ocupar dentro do LinearLayout.
+        Usado para distribuir o espaço disponível entre os elementos filhos.
+        android:gravity
+
+        Define como os elementos filhos são posicionados dentro do LinearLayout.
+        android:layout_gravity
+
+        Define como um elemento filho deve ser posicionado dentro do LinearLayout.
+
+        O LinearLayout é um tipo de layout que organiza seus filhos em uma única coluna ou linha.
+        A linha android:orientation="vertical" em XML no Android Studio é usada para definir a orientação
+          de um layout LinearLayout.
+
+        A linha android:autofillHints="name" em XML no Android Studio é usada para fornecer uma dica ao
+        sistema de preenchimento automático sobre o tipo de informação que deve ser preenchida automaticamente
+        naquele campo. Este atributo ajuda o sistema a identificar o tipo de dados esperado pelo usuário, como
+        nomes, endereços de email, números de telefone, etc.
+
+        A linha android:inputType="text" em XML no Android Studio é usada para especificar o tipo de dados que um
+        campo de entrada, como um EditText, deve aceitar. Isso influencia o tipo de teclado que é exibido ao usuário,
+        além de outras funcionalidades relacionadas ao tipo de entrada de dados.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/hint_name"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:layout_marginTop="150dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/hint_email"
+        android:autofillHints="emailAddress"
+        android:inputType="textWebEmailAddress"/>
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/hint_phone"
+        android:autofillHints="phone"
+        android:inputType="phone"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save" />
+
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_view" />
+
+    <Button
+        android:id="@+id/buttonLimparCampo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonLimparCampo" />
+
+</LinearLayout>
